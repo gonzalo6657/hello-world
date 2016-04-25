@@ -1,0 +1,50 @@
+ //-------------Function CylVol----------------
+ int CylVol(double Length, double Radius)
+ {
+ //Declare Variables
+ int vol;
+ const double pi = 3.1416;
+
+ vol = pi * pow(Radius, 2) * Length;// calculate the volume using
+ // V = 3.1416 * R^2 * L
+
+ return vol;//Calculated Volume
+ }//end CylVol
+
+
+ int main()
+ {
+ //Declare Variables
+ double Volume;
+ double Length;
+ double Radius;
+ double Multiplier = 144;
+
+
+ cout << endl;//print blank line
+ cout << "Calculate Cylinder Volume by\n"
+ << "entering the Length and Radius.\n"
+ << "*****NOTE*****\n"
+ << "Dimensions MUST be entered in INCHES." << endl;
+ cout << endl;
+ cout << "Enter Length of Cylinder in INCHES: " << endl;
+ cin >> Length;
+ cout << "Enter Radius of Cylinder in INCHES: " << endl;
+ cin >> Radius;
+ cout << endl;
+
+ Volume = CylVol(Length, Radius);//execute function
+
+ if (Volume > Multiplier)
+ {
+ Volume = Volume/Multiplier;
+ cout << "The Volume is " << Volume << " Square Feet" << endl;
+ }
+ else
+ cout << "The Volume is of the Cylinder is: " << Volume << " Square Inches" << endl;//print calculated volume to the screen
+
+ return 0;
+
+ system ("pause");
+ }
+
